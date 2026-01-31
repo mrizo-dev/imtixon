@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Talabalar ro'yxati</h2>
+<ul>
+    {% for s in talabalar %}
+    <li>
+        {{ s.ism }} ({{ s.yosh }} yosh, {{ s.kurs }}-kurs) -
+        <a href="{% url 'talaba_rejalari' s.id %}">Rejalarini ko'rish</a>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
